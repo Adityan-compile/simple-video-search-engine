@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Video Search Engine</title>
+    <link rel="stylesheet" href="/styles.css"></link>
+    <script type="text/javascript" src="script.js"></script>
+    <script async src="https://cse.google.com/cse.js?cx=47878fb065fcf4d58"></script>
+</head>
+<body>
+    <div class="flex app-container">
+        <h1>Simple Video Search Engine</h1>
+        <form action="/" method="get" role="search" class="flex" id="search-form" >
+            <input type="search" autocomplete="off" name="q" class="search-box" placeholder="Search for Videos" aria-placeholder="Search for Videos" size="50px">
+            <button type="submit" class="search-btn">
+                <img class="search-icon" src="search.svg" height="38px" width="38px" alt="Search">
+            </button>
+        </form>
+        <div class="gcse-searchresults-only"></div>
+        <div class="flex nav">
+            <div class="flex nav-control" onclick="prevPage()">
+                <img class="nav-icon" src="arrow-left.svg">
+                Prev
+            </div>
+            <div class="flex nav-control">
+                <h5 id="currentPage">0</h5>
+            </div>
+            <div class="flex nav-control" onclick="nextPage()">
+                Next
+                <img class="nav-icon" src="arrow-right.svg">
+            </div>
+        </div>
+        <div>
+            <button class="ext-search-btn">
+                Search <span id="ext-query"></span>  on Google
+            </button>
+        </div>
+    </div>
+</body>
+</html>
