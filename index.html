@@ -10,7 +10,36 @@
     <script async src="https://cse.google.com/cse.js?cx=47878fb065fcf4d58"></script>
 </head>
 <body>
-    <div class="flex app-container">
+    <div class="flex col">
+        <h2> <img src="pawxy.png" height="20px" width="20px"> Simple Video Search Engine</h2>
+        <div id="search-anchor"></div>
+        <form action="/" method="get" role="search" class="flex" id="search-form" >
+            <input type="search" autocomplete="off" name="q" id="search-box" class="search-box" placeholder="Search for Videos" aria-placeholder="Search for Videos" size="25rem">
+            <button type="submit" class="search-btn">
+                <img class="search-icon" src="search.svg" height="30px" width="30px" alt="Search">
+            </button>
+        </form>
+        <div id="results" class="flex col"></div>
+        <div class="flex nav space-between">
+            <div class="flex nav-control" onclick="prevPage()">
+                <img class="nav-icon" src="arrow-left.svg">
+                Prev
+            </div>
+            <div class="flex nav-control">
+                <h5 id="currentPage">0</h5>
+            </div>
+            <div class="flex nav-control" onclick="nextPage()">
+                Next
+                <img class="nav-icon" src="arrow-right.svg">
+            </div>
+        </div>
+        <div>
+            <button class="ext-search-btn" onclick="openInGoogle()"> 
+                <img class="search-icon" src="search.svg" height="16px" width="16px" alt="Search"> Search <span id="ext-query" style="font-weight: bold;"></span>  on Google
+            </button>
+        </div>
+    </div>
+    <!-- <div class="flex app-container">
         <h1>Simple Video Search Engine</h1>
         <form action="/" method="get" role="search" class="flex" id="search-form" >
             <input type="search" autocomplete="off" name="q" class="search-box" placeholder="Search for Videos" aria-placeholder="Search for Videos" size="50px">
@@ -18,7 +47,7 @@
                 <img class="search-icon" src="search.svg" height="38px" width="38px" alt="Search">
             </button>
         </form>
-        <div class="gcse-searchresults-only"></div>
+        <div class="gcse-searchresults-only" data-gname="storesearch"></div>
         <div class="flex nav">
             <div class="flex nav-control" onclick="prevPage()">
                 <img class="nav-icon" src="arrow-left.svg">
@@ -37,6 +66,6 @@
                 Search <span id="ext-query"></span>  on Google
             </button>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
